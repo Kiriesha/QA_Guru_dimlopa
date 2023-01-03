@@ -1,5 +1,6 @@
 plugins {
-    id 'java'
+    id 'java-library'
+    id "io.qameta.allure" version "2.9.6"
 }
 
 group 'org.example'
@@ -9,9 +10,49 @@ repositories {
     mavenCentral()
 }
 
+def selenideVersion = "6.3.5",
+    junitVersion = "5.9.1",
+    junitParamsVersion = "5.8.1",
+    slf4jVersion = "1.7.36",
+    javaFakerVersion = "1.0.2",
+    allureSelenideVersion = "2.17.3",
+    allureRestAssuredVersion = "2.17.3",
+    ownerVersion = "1.0.12",
+    restAssuredVersion = "4.5.1",
+    assertjVersion = "3.22.0",
+    jsonPathVersion = "2.7.0"
+
+allure {
+    report {
+        version.set("2.20.1")
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set("2.20.1") //версия Allure JUnit5 (https://github.com/allure-framework/allure-java)
+            }
+        }
+    }
+}
+
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation(
+            "com.codeborne:selenide:$selenideVersion",
+            "com.github.javafaker:javafaker:$javaFakerVersion",
+            "io.qameta.allure:allure-selenide:$allureSelenideVersion",
+            "io.qameta.allure:allure-rest-assured:$allureRestAssuredVersion",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "io.rest-assured:json-schema-validator:$restAssuredVersion",
+            "org.assertj:assertj-core:$assertjVersion",
+            "com.jayway.jsonpath:json-path:$jsonPathVersion",
+            "org.junit.jupiter:junit-jupiter-params:$junitParamsVersion"
+    )
+    testRuntimeOnly(
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
 test {
