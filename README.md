@@ -1,4 +1,4 @@
-# Test automation project for [Litres](https://www.aviasales.ru/)
+# Test automation project for [Litres](https://www.litres.ru/)
 
 <p  align="center">
 <img src="images/icons/LitLogo.png" alt="LitresLogo" width="900">

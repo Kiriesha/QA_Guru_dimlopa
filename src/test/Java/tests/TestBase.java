@@ -4,10 +4,12 @@ import com.codeborne.selenide.Configuration;
 import config.TestsConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeAll;
+import pages.AutorisationPage;
 import pages.MainPage;
 
 public class TestBase {
     MainPage mainPage = new MainPage();
+    AutorisationPage autoPage = new AutorisationPage();
 
     @BeforeAll
     static void Configuration() {

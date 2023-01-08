@@ -40,4 +40,5 @@ public class MainPage {
     public void booksModuleClick(){
         myBooksModule.click();
     }
+
 }
