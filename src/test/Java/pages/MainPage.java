@@ -22,23 +22,24 @@ public class MainPage {
         return this;
     }
     @Step("Search books Test")
-    public void setSearchModule() {
-        // searchModule.click();
-        searchModule.setValue("Стеклянный меч");
+    public void setSearchModule(String search) {
+        searchModule.setValue(search);
         clickButton.click();
         clickBook.click();
-        //clickFavButton.click();
+        clickFavButton.click();
     }
-
-
-  @Step("Test novie Module")
-  public void novieModuleClick() {
-      novieModule.click();
-  }
-
     @Step("Test My Books module")
     public void booksModuleClick(){
         myBooksModule.click();
     }
+
+
+  @Step("Test novie Module")
+  public void novieModuleClick()
+  {
+      novieModule.click();
+  }
+
+
 
 }

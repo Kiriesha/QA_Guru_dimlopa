@@ -25,5 +25,12 @@ public class TestBase {
         Configuration.browserSize = browserResolution;
         Configuration.holdBrowserOpen = true;
 
+        if (config.remote()) {
+            String selenoidLogin = config.selenoidLogin(),
+                    selenoidPassword = config.selenoidPassword();
+
+            Configuration.remote = String.format("https://%s:%s@selenoid.autotests.cloud/wd/hub",
+                    selenoidLogin, selenoidPassword);
+
     }
-}
+}}

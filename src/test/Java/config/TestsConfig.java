@@ -12,4 +12,10 @@ public interface TestsConfig extends Config {
     String baseUrl();
     @DefaultValue("1920x1080")
     String resolution();
+    @DefaultValue("false")
+    boolean remote();
+
+
+    String selenoidLogin();
+    String selenoidPassword();
 }
