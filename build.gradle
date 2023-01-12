@@ -55,6 +55,13 @@ dependencies {
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
+//testLogging {
+//    lifecycle {
+//        events "started", "skipped", "failed", "standard_error", "standard_out"
+//        exceptionFormat "short"
+//    }
+//}
+
 test {
     useJUnitPlatform()
 }
