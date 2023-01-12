@@ -1,6 +1,6 @@
 plugins {
     id 'java-library'
-    id "io.qameta.allure" version "2.9.6"
+    id "io.qameta.allure" version "2.11.2"
 }
 
 group 'org.example'
@@ -15,8 +15,8 @@ def selenideVersion = "6.3.5",
     junitParamsVersion = "5.8.1",
     slf4jVersion = "1.7.36",
     javaFakerVersion = "1.0.2",
-    allureSelenideVersion = "2.17.3",
-    allureRestAssuredVersion = "2.17.3",
+    allureSelenideVersion = "2.20.1",
+    allureRestAssuredVersion = "2.20.1",
     ownerVersion = "1.0.12",
     restAssuredVersion = "4.5.1",
     assertjVersion = "3.22.0",
@@ -30,7 +30,7 @@ allure {
         aspectjWeaver.set(true)
         frameworks {
             junit5 {
-                adapterVersion.set("2.20.1") //версия Allure JUnit5 (https://github.com/allure-framework/allure-java)
+                adapterVersion.set("2.20.1")
             }
         }
     }
