@@ -1,0 +1,5 @@
+[2023-01-13T12:05:08.332Z] [SEVERE] https://twitter.com/favicon.ico - Failed to load resource: net::ERR_CONNECTION_RESET
+[2023-01-13T12:05:08.772Z] [SEVERE] https://connect.facebook.net/ru_RU/all.js?hash=3d40c6922ac5f4d098007056f44fc4c9 48:299 "Malformed URL was passed to the URL constructor: Error URI malformed occured"
+[2023-01-13T12:05:08.883Z] [SEVERE] https://www.facebook.com/x/oauth/status?client_id=148369558555542&input_token&origin=1&redirect_uri=https%3A%2F%2Fwww.litres.ru%2Fpages%2Flogin%2F&sdk=joey&wants_cookie_data=true - Failed to load resource: net::ERR_CONNECTION_RESET
+[2023-01-13T12:05:08.883Z] [SEVERE] https://connect.facebook.net/ru_RU/all.js?hash=3d40c6922ac5f4d098007056f44fc4c9 48:299 "Error retrieving login status, fetch cancelled."
+[2023-01-13T12:05:11.474Z] [SEVERE] https://twitter.com/favicon.ico - Failed to load resource: net::ERR_CONNECTION_RESET
