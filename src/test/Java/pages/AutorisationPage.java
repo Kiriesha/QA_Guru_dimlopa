@@ -40,22 +40,6 @@ public class AutorisationPage {
 
     }
 
-//    public AutorisationPage setLogin() {
-//        authorizationLogin.setValue("testforqa@test.ru");
-//        submitContainer.click();
-//        return this;
-//    }
-//
-//    public AutorisationPage setPassword() {
-//        authorizationPassword.setValue("Testforqa1");
-//        submitContainer.click();
-//        return this;
-//    }
-//
-//    public AutorisationPage checkLogin() {
-//        profileSection.shouldHave(visible);
-//        return this;
-//    }
-//}
+
 // login: "testforqa@test.ru"
 // password: "Testforqa1"
