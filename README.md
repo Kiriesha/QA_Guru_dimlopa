@@ -5,7 +5,7 @@
 </p>
 
 
-><img width="10%" title="IntelliJ IDEA" src="./images/icons/1f310.png"> LitRes is an international company that produces and distributes e-books and digital audiobooks.
+><img width="5%" title="IntelliJ IDEA" src="./images/icons/1f310.png"> LitRes is an international company that produces and distributes e-books and digital audiobooks.
 
 
 # <a name="Description">Description</a>
@@ -60,12 +60,12 @@
  >   - Valid Autorisation;
  >   - Invalid Autorisation;
 
-## <img width="10%" title="Allure TestOps" src="./images/icons/Allure-TestOps.svg"> <a name="AllureTestOps">AllureTestOps</a> 
+## <img width="5%" title="Allure TestOps" src="./images/icons/Allure-TestOps.svg"> <a name="AllureTestOps">AllureTestOps</a> 
 
 
 [To Description](#Description)
 
-# <img width="10%" title="Gradle" src="./images/icons/gradle.svg"> <a name="GradleCommand">Gradle Command</a>
+# <img width="5%" title="Gradle" src="./images/icons/gradle.svg"> <a name="GradleCommand">Gradle Command</a>
 **To run the test locally from the terminal, run the command:**
 >gradle clean test
 
@@ -74,33 +74,40 @@
 
 [To Description](#Description)
 
-# <img width="10%" title="Jenkins" src="./images/icons/Jenkins.svg"> <a name="Jenkins">Jenkins</a>
+# <img width="5%" title="Jenkins" src="./images/icons/Jenkins.svg"> <a name="Jenkins">Jenkins</a>
 >**1. To start the build, you need to enter the parameters in the settings and then build with the specified parameters:**
 
 [<code><img width="800" title="Jenkins" src="./images/icons/Jenkins1.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/)
 
+
 >**2. Selecting parameters for assembly:**
 
 [<code><img width="800" title="Jenkins" src="./images/icons/Jenkins2.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/)
+
+
 >**3. After assembly, you can watch the Allure report:**
 
 <code><img width="800" title="Jenkins" src="./images/icons/Jenkins3.jpg"></code>
 [To Description](#Description)
 
-# <img width="10%" title="Allure Report" src="./images/icons/Allure-Report.svg"> <a name="Allure">Test results in Allure</a>
+# <img width="5%" title="Allure Report" src="./images/icons/Allure-Report.svg"> <a name="Allure">Test results in Allure</a>
 >**1. On the Overview tab you can see general information:**
 
-[<code><img width="800" title="Jenkins" src="./images/icons/Allure1.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/)
+[<code><img width="800" title="Allure Report" src="./images/icons/Allure1.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/)
+
+
 >**2. This tab contains graphs:**
 
-[<code><img width="800" title="Jenkins" src="./images/icons/Allure2.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#graph)
+[<code><img width="800" title="Allure Report" src="./images/icons/Allure2.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#graph)
+
+
 > **3. On this tab you can view the test steps and Attachments for each test:**
 
-[<code><img width="800" title="Jenkins" src="./images/icons/Allure3.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#suites)
+[<code><img width="800" title="Allure Report" src="./images/icons/Allure3.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#suites)
 
 [To Description](#Description)
 
-# <img width="10%" title="Allure Report" src="./images/icons/Jira.svg"> <a name="Jira">Jira integration</a>
+# <img width="5%" title="Jira" src="./images/icons/Jira.svg"> <a name="Jira">Jira integration</a>
 
 
 
@@ -108,7 +115,7 @@
 
 [To Description](#Description)
 
-# <img width="10%" title="Telegram" src="./images/icons/Telegram.svg"> <a name="Telegram">Telegram notification</a>
+# <img width="5%" title="Telegram" src="./images/icons/Telegram.svg"> <a name="Telegram">Telegram notification</a>
 > **After the build, a report comes in Telegram (using a pre-created bot):**
 
 <code><img width="800" title="Jenkins" src="./images/icons/TelegramBot.png"></code>
