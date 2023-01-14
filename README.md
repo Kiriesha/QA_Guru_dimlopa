@@ -50,11 +50,15 @@
 [To Description](#Description)
 
 
-# <a name="tests">tests</a>
+# <a name="tests">Tests</a>
  > - Test " Lower-Menu-Module Selection ";
- > - Test " item added to the cart ";
- > - Test book title search;
- > - User credentials validation.
+ > - Test "Genres menu";
+ > - Test "Scrolling the carousel on the Main page";
+ > - Test books title search;
+ > - Checking the addition of books to favourites;
+ > - User credentials validation:
+ >   - Valid Autorisation;
+ >   - Invalid Autorisation;
 
 ## <a name="AllureTestOps">AllureTestOps</a> 
 
@@ -65,21 +69,34 @@
 To run the test locally from the terminal, run the command:
 >**gradle clean test**
 
+Parameterised assembly:
+>**gradle clean test -DbaseUrl=${BASEURL} -Dbrowser=${BROWSER} -DbrowserVersion=${BROWSER_VERSION} -DEnvironment=${ENVIRONMENT} -DbrowserSize=${BROWSER_SIZE} -DremoteDriverUrl=${SELENOID_URL}**
 
 [To Description](#Description)
 
 # <a name="Jenkins">Jenkins</a>
+>1. To start the build, you need to enter the parameters in the settings and then build with the specified parameters:
 
+[<code><img width="800" title="Jenkins" src="./images/icons/Jenkins1.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/)
 
+>2. Selecting parameters for assembly:
 
+[<code><img width="800" title="Jenkins" src="./images/icons/Jenkins2.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/)
+>3. After assembly, you can watch the Allure report:
 
+<code><img width="800" title="Jenkins" src="./images/icons/Jenkins3.jpg"></code>
 [To Description](#Description)
 
 # <a name="Allure">Test results in Allure</a>
+>1. On the Overview tab you can see general information:
 
+[<code><img width="800" title="Jenkins" src="./images/icons/Allure1.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/)
+>2. This tab contains graphs:
 
+[<code><img width="800" title="Jenkins" src="./images/icons/Allure2.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#graph)
+> 3. On this tab you can view the test steps and Attachments for each test:
 
-
+[<code><img width="800" title="Jenkins" src="./images/icons/Allure3.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#suites)
 
 [To Description](#Description)
 
@@ -93,7 +110,7 @@ To run the test locally from the terminal, run the command:
 
 # <a name="Telegram">Telegram notification</a>
 
-
+<code><img width="800" title="Jenkins" src="./images/icons/TelegramBot.png"></code>
 
 
 [To Description](#Description)
