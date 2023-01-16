@@ -18,7 +18,7 @@ def selenideVersion = "6.3.5",
     allureSelenideVersion = "2.20.1",
     allureRestAssuredVersion = "2.20.1",
     ownerVersion = "1.0.12",
-    restAssuredVersion = "4.5.1",
+    restAssuredVersion = "5.3.0",
     assertjVersion = "3.22.0",
     jsonPathVersion = "2.7.0"
 
@@ -50,9 +50,9 @@ dependencies {
             "com.jayway.jsonpath:json-path:$jsonPathVersion",
             "org.junit.jupiter:junit-jupiter-params:$junitParamsVersion"
     )
-    testRuntimeOnly(
-            "org.slf4j:slf4j-simple:$slf4jVersion",
-            "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+//    testRuntimeOnly(
+//            "org.slf4j:slf4j-simple:$slf4jVersion",
+//            "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
 tasks.withType(Test) {
