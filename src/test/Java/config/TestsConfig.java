@@ -10,7 +10,7 @@ public interface TestsConfig extends Config {
     @DefaultValue("chrome")
     String browser();
     @Key("version")
-    @DefaultValue("108.0")
+    @DefaultValue("109.0")
     String version();
     @Key("baseUrl")
     @DefaultValue("https://www.litres.ru")
@@ -18,8 +18,7 @@ public interface TestsConfig extends Config {
     @Key("resolution")
     @DefaultValue("1920x1080")
     String resolution();
-//    @DefaultValue("false")
-    @Key("remote")
+    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
     String remote();
 
     @Key("selenoidLogin")
