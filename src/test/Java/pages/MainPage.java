@@ -11,8 +11,8 @@ import static groovy.xml.dom.DOMCategory.text;
 
 public class MainPage {
     SelenideElement
-            searchModule = $(".SearchForm-module__input_krNG2"),
-            clickButton = $(".SearchForm-module__button_zMwhB"),
+            searchModule = $(".SearchForm-module__input_1E6az"),
+            clickButton = $(".SearchForm-module__button_3JhUZ"),
             clickBook = $(".Book-module__title_2mdk-"),
             clickFavButton = $(".art-buttons__favorite"),
             novieModule = $x("//a[@href=\"/novie/\"]"),

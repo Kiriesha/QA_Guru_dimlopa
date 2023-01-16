@@ -8,8 +8,6 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AutorisationPage {
     SelenideElement
-            //loginModule = $(".Popover-module__mask"),
-            autoModule = $(".AuthorizationPopup-module__step"),
             pwd = $("[id = open_pwd_main]"),
             login = $("[name = login"),
             loginButton = $("[id = login_btn]"),
