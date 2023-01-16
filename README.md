@@ -123,4 +123,11 @@
 
 [To Description](#Description)
 
+## <img width="5%" title="Selenoid" src="images/icons/selenoid.svg"> Running tests in Selenoid
+
+<p align="center">
+  <img title="Selenoid Video" src="images/SelenoidVideo.gif">
+</p>
+
+[To Description](#Description)
 
