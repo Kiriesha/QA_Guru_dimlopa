@@ -1,3 +1,0 @@
-[2023-01-13T12:04:30.160Z] [SEVERE] https://www.litres.ru/static/sociallogin.js?9e983f 8:162 Uncaught ReferenceError: BodyLoadFunc is not defined
-[2023-01-13T12:04:30.161Z] [SEVERE] https://www.litres.ru/pages/login/ 594:15 Uncaught TypeError: Cannot read properties of undefined (reading 'services')
-[2023-01-13T12:04:30.285Z] [SEVERE] https://twitter.com/favicon.ico - Failed to load resource: net::ERR_CONNECTION_RESET

@@ -48,7 +48,7 @@ dependencies {
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "org.assertj:assertj-core:$assertjVersion",
             "com.jayway.jsonpath:json-path:$jsonPathVersion",
-            "org.junit.jupiter:junit-jupiter-params:$junitParamsVersion"
+            "org.junit.jupiter:junit-jupiter-params:$junitParamsVersion",
     )
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:$slf4jVersion",

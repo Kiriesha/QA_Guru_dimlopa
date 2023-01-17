@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="windows-1251">
-    <file url="file://$PROJECT_DIR$/src/test/java/com/AviasalesKireeva/TestAvia.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/com/AviasalesKireeva/TestAvia.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/configmobile/mobileconfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/driversmobile/BrowserstackMobileDriver.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/driversmobile/LocalMobileDriver.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/helpersmobile/Attach.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/helpersmobile/Browserstack.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/helpersmobile/ClickToSkip.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/testsmobile/LitresAndroidTests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/Java/testsmobile/TestBase.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/apps" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/browserstack.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/local.properties" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

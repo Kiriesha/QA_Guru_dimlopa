@@ -1,4 +1,4 @@
-package tests.ui;
+package tests;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -9,7 +9,7 @@ import static io.qameta.allure.Allure.step;
 
 public class InvalidLoginTest extends TestBase {
 
-        @Feature("UI tests Litres")
+        @Feature("Tests Litres")
         @Story("Main page Litres")
         @DisplayName("InValid autorisation")
         @Test

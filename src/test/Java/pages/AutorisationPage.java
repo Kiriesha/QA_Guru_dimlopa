@@ -29,11 +29,8 @@ public class AutorisationPage {
         cabinet.click();
         personalAccount.shouldHave(visible);}
     public void exit(){exitFromAccount.click();}
-
     public void entryInvalidLogin() { login.setValue("test");}
     public void entryInValidPassword(){ pwd.setValue("Test");}
-
-
     public void pressTheButton(){ loginButton.click();}
 
     }
