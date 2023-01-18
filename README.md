@@ -15,7 +15,6 @@
 + [Jenkins](#Jenkins)
 + [Test results in Allure](#Allure)
   + [AllureTestOps](#AllureTestOps)
-+ [Jira integration](#Jira)
 + [Telegram notification](#Telegram)
 
 
