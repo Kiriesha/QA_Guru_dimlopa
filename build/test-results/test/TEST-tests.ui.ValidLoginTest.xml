@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.ui.ValidLoginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-13T12:05:07" hostname="AAKIREEVA-NB" time="4.789">
-  <properties/>
-  <testcase name="Valid autorisation" classname="tests.ui.ValidLoginTest" time="4.789"/>
-  <system-out><![CDATA[https://selenoid.autotests.cloud/video/95fe5e93e6d37a10fdc985c75c189138.mp4
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
