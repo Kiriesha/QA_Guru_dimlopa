@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.Allure.step;
 
 public class InvalidLoginTest extends TestBase {
-
         @Feature("Tests Litres")
         @Story("Main page Litres")
         @DisplayName("InValid autorisation")
@@ -26,6 +25,4 @@ public class InvalidLoginTest extends TestBase {
             step("Press the button", () ->
                     autoPage.pressTheButton());
         }
-
-
     }

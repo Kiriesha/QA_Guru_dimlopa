@@ -15,8 +15,6 @@ public class AutorisationPage {
             personalAccount = $(".personal_cabinet_notifications"),
             exitFromAccount = $(".Menu__exit_TFDJG");
 
-
-
     @Step("Open main page")
     public AutorisationPage openAutoPage() {
         open("https://www.litres.ru/pages/login/");
@@ -34,7 +32,6 @@ public class AutorisationPage {
     public void pressTheButton(){ loginButton.click();}
 
     }
-
 
 // login: "testforqa@test.ru"
 // password: "Testforqa1"

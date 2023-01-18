@@ -12,7 +12,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-
 public class MainPageTest extends TestBase {
 
     @Feature("Tests Litres")

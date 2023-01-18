@@ -27,7 +27,6 @@ public class TestBase {
 
         SelenideLogger.addListener("Allure", new AllureSelenide());
 
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
         Configuration.browserCapabilities = capabilities;
 
@@ -42,13 +41,11 @@ public class TestBase {
         Configuration.browserVersion = browserVersion;
         Configuration.browserSize = browserSize;
 
-
         if (RemoteConfig.isRemoteWebDriver()) {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
             Configuration.remote = RemoteConfig.config.remote();
         }
-
     }
 
     @AfterEach
