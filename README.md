@@ -106,11 +106,11 @@
 
 > <img width="3%" title="IntelliJ IDEA" src="./images/icons/1f310.png">**Remote test run:**
 >
-[<code><img width="800" title="Allure Test Ops" src="./images/icons/AllureRemote.jpg"></code>](https://allure.autotests.cloud/launch/18562/tree/241592?treeId=0)
+[<code><img width="800" title="Allure Test Ops" src="./images/icons/AllureRemote.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/27/allure/#suites/79ebe369f30809f9080cd9c164b54d13/6f258747176e55e3/)
 > 
 > **Running tests remotely through Jenkins falls flat because the Litres site recognises such a run as a Bot and asks for confirmation that you are a real person:**
 
-[<code><img width="800" title="Allure Report" src="./images/icons/AllureRemote1.jpg"></code>](https://allure.autotests.cloud/launch/18562/tree/241592?treeId=0)
+[<code><img width="800" title="Allure Report" src="./images/icons/AllureRemote1.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/27/allure/#suites/79ebe369f30809f9080cd9c164b54d13/6f258747176e55e3/)
 [To Description](#Description)
 
 ## <img width="5%" title="Allure TestOps" src="./images/icons/Allure-TestOps.svg"> <a name="AllureTestOps">AllureTestOps</a>
