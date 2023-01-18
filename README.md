@@ -88,7 +88,7 @@
 [To Description](#Description)
 
 # <img width="5%" title="Allure Report" src="./images/icons/Allure-Report.svg"> <a name="Allure">Test results in Allure</a>
-> <img width="3%" title="IntelliJ IDEA" src="./images/icons/1f4bb.png">**Local test run:** 
+><img width="3%" title="IntelliJ IDEA" src="./images/icons/1f4bb.png">**Local test run:** 
 > 
 >**1. On the Overview tab you can see general information:**
 
