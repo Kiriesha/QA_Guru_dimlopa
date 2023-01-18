@@ -19,7 +19,6 @@ public class MainPageTest extends TestBase {
     @DisplayName("Check the Genres")
     @Test
     void test1Genres() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
         step("Choose 'Genres' module", () ->
@@ -37,21 +36,18 @@ public class MainPageTest extends TestBase {
     @DisplayName("Check the Carousel Button")
     @Test
     void test2carousel() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         mainPage
                 .openMainPage()
                 .carouselButton();
     }
 
-    @ValueSource(strings = {"Ñòåêëÿííûé ìå÷","Ìàñòåð è ìàðãàðèòà","Øîëîõ"})
+    @ValueSource(strings = {"Ð’Ð¸Ð½Ð¾ Ð¸Ð· Ð¾Ð´ÑƒÐ²Ð°Ð½Ñ‡Ð¸ÐºÐ¾Ð²","Ð¢ÐµÐ¼Ð½Ñ‹Ð¹ ÐºÐ°Ñ€Ð½Ð°Ð²Ð°Ð»","Ð“Ñ€Ð¾Ð·Ð¾Ð²Ð¾Ð¹ Ð¿ÐµÑ€ÐµÐ²Ð°Ð»"})
     @ParameterizedTest
     @Feature("Tests Litres")
     @Story("Main page Litres")
     @DisplayName("Book title search")
     @Test
     void test3titleSearch(String search) {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
         step("Enter a book title", () ->
@@ -67,7 +63,6 @@ public class MainPageTest extends TestBase {
     @DisplayName("NewBooks")
     @Test
     void test4clickNovieModule() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
         step("Choose a module", () ->
@@ -79,10 +74,10 @@ public class MainPageTest extends TestBase {
     @DisplayName("Check My books")
     @Test
     void test5myBooksModule() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
         step("Open 'my book' module. Check that the books from test 3 are displayed",() ->
                 mainPage.booksModuleClick());
     }
+
 }

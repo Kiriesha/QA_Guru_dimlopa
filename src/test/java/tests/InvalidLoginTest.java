@@ -7,22 +7,24 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+@Feature("Tests Litres")
+@Story("Main page Litres")
 public class InvalidLoginTest extends TestBase {
-    @Feature("Tests Litres")
-    @Story("Main page Litres")
-    @DisplayName("InValid autorisation")
+
+    @DisplayName("Invalid authorization")
     @Test
-    void InvalidAutorisation() {
-        step("Open Autorisation page 'https://www.litres.ru/pages/login/'", () ->
-                autoPage.openAutoPage());
+    void invalidAuthorization() {
+        step("Open authorization page 'https://www.litres.ru/pages/login/'",
+                autoPage::openAutoPage);
 
-        step("Entering an invalid Login", ()
-                -> autoPage.entryInvalidLogin());
+        step("Entering an invalid Login",
+                autoPage::entryInvalidLogin);
 
-        step("Entering an invalid password", () ->
-                autoPage.entryInValidPassword());
+        step("Entering an invalid password",
+                autoPage::entryInValidPassword);
 
-        step("Press the button", () ->
-                autoPage.pressTheButton());
+        step("Press the button",
+                autoPage::pressTheButton);
     }
+
 }
