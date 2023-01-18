@@ -22,7 +22,6 @@ public class MainPage {
             childBooks = $x("//a[@href=\"/genre/detskie-knigi-5007/\"]"),
             carouselButton = $(".CarouselButtons-module__next_3b6r0");
 
-
     @Step("Open main page")
     public MainPage openMainPage(){
         open("/");
