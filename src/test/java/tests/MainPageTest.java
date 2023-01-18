@@ -1,23 +1,19 @@
 package tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@Feature("Tests Litres")
+@Story("Main page Litres")
 public class MainPageTest extends TestBase {
 
-    @Feature("Tests Litres")
-    @Story("Main page Litres")
-    @DisplayName("Check the Genres")
     @Test
+    @DisplayName("Check the Genres")
     void test1Genres() {
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
@@ -31,10 +27,8 @@ public class MainPageTest extends TestBase {
                 mainPage.childBooksGenres());
     }
 
-    @Feature("Tests Litres")
-    @Story("Main page Litres")
-    @DisplayName("Check the Carousel Button")
     @Test
+    @DisplayName("Check the Carousel Button")
     void test2carousel() {
         mainPage
                 .openMainPage()
@@ -43,10 +37,7 @@ public class MainPageTest extends TestBase {
 
     @ValueSource(strings = {"Вино из одуванчиков","Темный карнавал","Грозовой перевал"})
     @ParameterizedTest
-    @Feature("Tests Litres")
-    @Story("Main page Litres")
     @DisplayName("Book title search")
-    @Test
     void test3titleSearch(String search) {
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
@@ -58,10 +49,8 @@ public class MainPageTest extends TestBase {
                 mainPage.clickFavBook());
     }
 
-    @Feature("Tests Litres")
-    @Story("Main page Litres")
-    @DisplayName("NewBooks")
     @Test
+    @DisplayName("NewBooks")
     void test4clickNovieModule() {
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
@@ -69,10 +58,8 @@ public class MainPageTest extends TestBase {
                 mainPage.novieModuleClick());
     }
 
-    @Feature("Tests Litres")
-    @Story("Main page Litres")
-    @DisplayName("Check My books")
     @Test
+    @DisplayName("Check My books")
     void test5myBooksModule() {
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
