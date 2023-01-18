@@ -11,10 +11,10 @@
 # <a name="Description">Description</a>
 + [Technology stack](#Technology)
 + [tests](#Tests)
-  + [AllureTestOps](#AllureTestOps)
 + [Gradle command](#GraleCommand)
 + [Jenkins](#Jenkins)
 + [Test results in Allure](#Allure)
+  + [AllureTestOps](#AllureTestOps)
 + [Jira integration](#Jira)
 + [Telegram notification](#Telegram)
 
@@ -60,9 +60,6 @@
  >   - Valid Autorisation;
  >   - Invalid Autorisation;
 
-## <img width="5%" title="Allure TestOps" src="./images/icons/Allure-TestOps.svg"> <a name="AllureTestOps">AllureTestOps</a> 
-
-
 [To Description](#Description)
 
 # <img width="5%" title="Gradle" src="./images/icons/gradle.svg"> <a name="GradleCommand">Gradle Command</a>
@@ -91,6 +88,8 @@
 [To Description](#Description)
 
 # <img width="5%" title="Allure Report" src="./images/icons/Allure-Report.svg"> <a name="Allure">Test results in Allure</a>
+> <img width="3%" title="IntelliJ IDEA" src="./images/icons/1f4bb.png">**Local test run:** 
+> 
 >**1. On the Overview tab you can see general information:**
 
 [<code><img width="800" title="Allure Report" src="./images/icons/Allure1.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/)
@@ -105,21 +104,24 @@
 
 [<code><img width="800" title="Allure Report" src="./images/icons/Allure3.jpg"></code>](https://jenkins.autotests.cloud/job/Diploma_Kiriesha/2/allure/#suites)
 
+> <img width="3%" title="IntelliJ IDEA" src="./images/icons/1f310.png">**Remote test run:**
+>
+[<code><img width="800" title="Allure Test Ops" src="./images/icons/AllureRemote.jpg"></code>](https://allure.autotests.cloud/launch/18562/tree/241592?treeId=0)
+> 
+> **Running tests remotely through Jenkins falls flat because the Litres site recognises such a run as a Bot and asks for confirmation that you are a real person:**
+
+[<code><img width="800" title="Allure Report" src="./images/icons/AllureRemote1.jpg"></code>](https://allure.autotests.cloud/launch/18562/tree/241592?treeId=0)
 [To Description](#Description)
 
-# <img width="5%" title="Jira" src="./images/icons/Jira.svg"> <a name="Jira">Jira integration</a>
-
-
-
-
-
-[To Description](#Description)
+## <img width="5%" title="Allure TestOps" src="./images/icons/Allure-TestOps.svg"> <a name="AllureTestOps">AllureTestOps</a>
+>**Analysis of results in AllureTestOps (same situation as with Allure Report):**
+>
+[<code><img width="800" title="Allure Report" src="./images/icons/AllureTestOps.jpg"></code>](https://allure.autotests.cloud/launch/18562/tree/241592?treeId=0)
 
 # <img width="5%" title="Telegram" src="./images/icons/Telegram.svg"> <a name="Telegram">Telegram notification</a>
 > **After the build, a report comes in Telegram (using a pre-created bot):**
 
 <code><img width="800" title="Jenkins" src="./images/icons/TelegramBot.png"></code>
-
 
 [To Description](#Description)
 
