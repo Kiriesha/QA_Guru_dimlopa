@@ -10,6 +10,13 @@ repositories {
     mavenCentral()
 }
 
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 def selenideVersion = "6.9.0",
     junitVersion = "5.9.1",
     junitParamsVersion = "5.8.1",
