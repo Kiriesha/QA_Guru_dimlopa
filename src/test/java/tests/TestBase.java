@@ -2,9 +2,8 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import config.RemoteConfig;
-import config.TestsConfig;
 
+import config.AppConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -16,36 +15,36 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.AutorisationPage;
 import pages.MainPage;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-
 public class TestBase {
-    public MainPage mainPage = new MainPage();
-    public AutorisationPage autoPage = new AutorisationPage();
+
+    private static final AppConfig APP_CONFIG = ConfigFactory.create(AppConfig.class, System.getProperties());
+
+    public final MainPage mainPage = new MainPage();
+    public final AutorisationPage autoPage = new AutorisationPage();
 
     @BeforeAll
-    static void Configuration() {
+    static void configure() {
+//        System.setProperty("chromeoptions.prefs", "intl.accept_languages=ru");
 
-        SelenideLogger.addListener("Allure", new AllureSelenide());
+        Configuration.baseUrl = APP_CONFIG.baseUrl();
+        Configuration.browser = APP_CONFIG.browser();
+        Configuration.browserSize = APP_CONFIG.browserSize();
+        Configuration.browserVersion = APP_CONFIG.browserVersion();
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        Configuration.browserCapabilities = capabilities;
+        String remoteUrl = APP_CONFIG.remoteUrl();
+        if (remoteUrl != null) {
+            Configuration.remote = remoteUrl;
 
-        Configuration.baseUrl = ("https://www.litres.ru");
-
-        String browserName = System.getProperty("browser", "chrome");
-        String browserVersion = System.getProperty("browserVersion", "100");
-        String browserSize = System.getProperty("browserSize",  "1600x800");
-        String remote = System.getProperty("remote",  "https://user1:1234@selenoid.autotests.cloud/wd/hub");
-
-        Configuration.browser = browserName;
-        Configuration.browserVersion = browserVersion;
-        Configuration.browserSize = browserSize;
-
-        if (RemoteConfig.isRemoteWebDriver()) {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.remote = RemoteConfig.config.remote();
+            Configuration.browserCapabilities = capabilities;
         }
+    }
+
+    @BeforeEach
+    void addListener() {
+        SelenideLogger.addListener("Allure", new AllureSelenide());
     }
 
     @AfterEach
