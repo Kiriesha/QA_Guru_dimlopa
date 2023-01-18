@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.RemoteConfig;
 import config.TestsConfig;
 
 import helpers.Attach;
@@ -18,28 +19,8 @@ import pages.MainPage;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
-    MainPage mainPage = new MainPage();
-    AutorisationPage autoPage = new AutorisationPage();
-//
-//    @BeforeAll
-//    static void setUp() {
-//        WebDriver.configure();
-//    }
-//
-//    @BeforeEach
-//    public void addListener() {
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-//    }
-//
-//    @AfterEach
-//    void addAttachments() {
-//        Attach.screenshotAs("Last screenshot");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
-//        Attach.addVideo();
-//        closeWebDriver();
-//    }
-//
+   public MainPage mainPage = new MainPage();
+    public AutorisationPage autoPage = new AutorisationPage();
 
     @BeforeAll
     static void Configuration() {
@@ -48,8 +29,6 @@ public class TestBase {
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
         Configuration.baseUrl = ("https://www.litres.ru");
@@ -57,58 +36,21 @@ public class TestBase {
         String browserName = System.getProperty("browser", "chrome");
         String browserVersion = System.getProperty("browserVersion", "100");
         String browserSize = System.getProperty("browserSize",  "1600x800");
-        String remoteUrl = System.getProperty("remote",  "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        String remote = System.getProperty("remote",  "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
-        Configuration.browser= browserName;
-        Configuration.browserVersion= browserVersion;
+        Configuration.browser = browserName;
+        Configuration.browserVersion = browserVersion;
         Configuration.browserSize = browserSize;
-        Configuration.holdBrowserOpen = false;
-        if(remoteUrl!= null ){
-            Configuration.remote = remoteUrl;
+
+
+        if (RemoteConfig.isRemoteWebDriver()) {
+            capabilities.setCapability("enableVNC", true);
+            capabilities.setCapability("enableVideo", true);
+            Configuration.remote = RemoteConfig.config.remote();
         }
 
     }
 
-//    TestsConfig config = ConfigFactory.create(TestsConfig.class, System.getProperties());
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//
-//        String browserName = System.getProperty("browser", "chrome");
-//        String browserVersion = System.getProperty("browserVersion", "100");
-//        String browserResolution = System.getProperty("browserSize",  "1600x800");
-//        String remoteUrl = System.getProperty("remote",  "https://user1:1234@selenoid.autotests.cloud/wd/hub");
-//
-//        Configuration.browser = browserName;
-//        Configuration.browserVersion = browserVersion;
-//        Configuration.baseUrl = config.baseUrl();
-//        Configuration.browserSize = browserResolution;
-//        Configuration.holdBrowserOpen = true;
-//        Configuration.remote = remoteUrl;
-//
-//        Configuration.browserCapabilities = capabilities;
-////        capabilities.setCapability("enableVNC", true);
-////        capabilities.setCapability("enableVideo", true);
-//
-//
-//
-//        String configSource = config.remote();
-//
-//        if (configSource != null) {
-//            String selenoidLogin = config.selenoidLogin(),
-//                    selenoidPassword = config.selenoidPassword();
-//
-//            Configuration.remote = String.format("https://user1:1234@selenoid.autotests.cloud/wd/hub",
-//                    selenoidLogin, selenoidPassword);
-//
-////        if (config.remote()) {
-////            String selenoidLogin = config.selenoidLogin(),
-////                    selenoidPassword = config.selenoidPassword();
-////
-////            Configuration.remote = String.format("https://@selenoid.autotests.cloud/wd/hub",
-////                    selenoidLogin, selenoidPassword);
-////
-////        }
-////    }
-//        }}
     @AfterEach
     void addAttach() {
         Attach.screenshotAs("Last screenshot");

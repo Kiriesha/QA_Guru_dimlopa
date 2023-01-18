@@ -17,7 +17,7 @@ public interface TestsConfig extends Config {
     String baseUrl();
     @Key("resolution")
     @DefaultValue("1920x1080")
-    String resolution();
+    String browserSize();
     @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
     String remote();
 

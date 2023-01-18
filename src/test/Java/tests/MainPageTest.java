@@ -44,7 +44,7 @@ public class MainPageTest extends TestBase {
                 .carouselButton();
     }
 
-    @ValueSource(strings = {"Стеклянный меч","Мастер и маргарита","Шолох"})
+    @ValueSource(strings = {"РЎС‚РµРєР»СЏРЅРЅС‹Р№ РјРµС‡","РњР°СЃС‚РµСЂ Рё РјР°СЂРіР°СЂРёС‚Р°","РЁРѕР»РѕС…"})
     @ParameterizedTest
     @Feature("Tests Litres")
     @Story("Main page Litres")
