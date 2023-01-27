@@ -16,7 +16,6 @@ public interface AppConfig extends Config {
     @DefaultValue("100.0")
     String browserVersion();
 
-
     @Key("browser.size")
     @DefaultValue("1920x1080")
     String browserSize();
