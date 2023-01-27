@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class AutorisationPage {
-    SelenideElement
+    private final SelenideElement
             pwd = $("[id = open_pwd_main]"),
             login = $("[name = login"),
             loginButton = $("[id = login_btn]"),
@@ -32,10 +32,7 @@ public class AutorisationPage {
 
     public void entryInvalidLogin() { login.setValue("test");}
     public void entryInValidPassword(){ pwd.setValue("Test");}
-
     public void pressTheButton(){ loginButton.click();}
 
     }
 
-// login: "testforqa@test.ru"
-// password: "Testforqa1"

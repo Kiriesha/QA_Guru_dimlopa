@@ -2,12 +2,9 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
-import org.w3c.dom.Node;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
-import static groovy.xml.dom.DOMCategory.text;
 
 public class MainPage {
     SelenideElement
@@ -51,14 +48,6 @@ public class MainPage {
         easyRead.click();}
     public void childBooksGenres(){
         childBooks.click();
-  }
-
-  @Step("Social sites (youtube)")
-    public void carouselButton()
-  {
-      carouselButton.click();
-      carouselButton.click();
-      carouselButton.click();
   }
 
 }
