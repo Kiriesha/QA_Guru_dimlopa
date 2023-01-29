@@ -1,7 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import io.qameta.allure.Step;
+import io.qameta.allure.model.Status;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
@@ -15,24 +15,21 @@ public class AutorisationPage {
             personalAccount = $(".personal_cabinet_notifications"),
             exitFromAccount = $(".Menu__exit_TFDJG");
 
-    @Step("Open main page")
     public AutorisationPage openAutoPage() {
         open("https://www.litres.ru/pages/login/");
-        return this;
-    }
-    public void entryValidLogin() { login.setValue("testforqa@test.com");}
-
-    public void entryValidPassword(){ pwd.setValue("Testforqa1");}
-
+        return this;}
+    public void entryValidLogin(String signInEmail) { login.setValue(signInEmail);}
+    public void entryValidPassword(String signInPassword){ pwd.setValue(signInPassword);}
     public void clickOnCabinet(){
         cabinet.click();
         personalAccount.shouldHave(visible);}
-
     public void exit(){exitFromAccount.click();}
-
-    public void entryInvalidLogin() { login.setValue("test");}
-    public void entryInValidPassword(){ pwd.setValue("Test");}
-    public void pressTheButton(){ loginButton.click();}
-
+    public Status entryInvalidLogin(String signInInvalidEmail) { login.setValue(signInInvalidEmail);
+        return null;
     }
+    public Status entryInValidPassword(String signInIvalidPassword){ pwd.setValue(signInIvalidPassword);
+        return null;
+    }
+    public void pressTheButton(){ loginButton.click();}
+}
 
