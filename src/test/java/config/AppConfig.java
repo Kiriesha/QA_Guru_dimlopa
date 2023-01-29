@@ -23,4 +23,18 @@ public interface AppConfig extends Config {
     @Key("remote.url")
     String remoteUrl();
 
+    @Key("userEmail")
+    static String userEmail() {
+        return null;
+    }
+    @Key("password")
+    static String password() {
+        return null;
+    }
+    @Key("invalidUserEmail")
+    static String invalidUserEmail();
+    @Key("invalidPassword")
+    String invalidPassword();
+
+
 }

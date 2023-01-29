@@ -1,8 +1,8 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import io.qameta.allure.Step;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -17,15 +17,13 @@ public class MainPage {
             genresModule = $x("//a[@href=\"/pages/new_genres/\"]"),
             easyRead = $x("//a[@href=\"/genre/legkoe-chtenie-201583/\"]"),
             childBooks = $x("//a[@href=\"/genre/detskie-knigi-5007/\"]"),
-            carouselButton = $(".CarouselButtons-module__next_3b6r0");
+            checkMyBooksVisible = $(".new-container"),
+            checkTheNewModuleVisible =$(".RootGenre-module__wrapper_subscription_banner_3FZTa");
 
-    @Step("Open main page")
+
     public MainPage openMainPage(){
         open("/");
-        return this;
-    }
-
-    @Step("Search books Test")
+        return this; }
     public void setSearchModule(String search) {
         searchModule.setValue(search);
         clickButton.click();}
@@ -34,20 +32,19 @@ public class MainPage {
     public void clickFavBook(){
         clickFavButton.click();
     }
-
-    @Step("Test My Books module")
     public void booksModuleClick(){ myBooksModule.click();}
-
-    @Step("Test novie Module")
     public void novieModuleClick() { novieModule.click();}
-
-     @Step("Test genres module")
-        public void genres (){
-        genresModule.click();}
-    public void easyReadGenres(){
-        easyRead.click();}
+    public void genres (){genresModule.click();}
+    public void easyReadGenres(){easyRead.click();}
     public void childBooksGenres(){
         childBooks.click();
   }
-
+    public MainPage checkMyBooksVisible(){
+        checkMyBooksVisible.shouldBe(visible);
+        return this;
+  }
+  public MainPage  checkTheNewModuleVisible(){
+      checkTheNewModuleVisible.shouldBe(visible);
+      return this;
+  }
 }

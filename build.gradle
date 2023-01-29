@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id "io.qameta.allure" version "2.11.2"
+    id "io.freefair.lombok" version "6.0.0-m2"
 }
 
 group 'org.example'
@@ -57,6 +58,7 @@ dependencies {
             "com.jayway.jsonpath:json-path:$jsonPathVersion",
             "org.junit.jupiter:junit-jupiter-params:$junitParamsVersion",
     )
+    testImplementation 'org.projectlombok:lombok:1.18.22'
     testRuntimeOnly(
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")

@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 public class MainPageTest extends TestBase {
     @Test
     @DisplayName("Check the Genres")
-    void theGenresModuleCheck() {
+    void opentheGenresModule() {
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
         step("Choose 'Genres' module", () ->
@@ -40,23 +40,29 @@ public class MainPageTest extends TestBase {
                 mainPage.clickBook());
         step("Put the book down in my books", () ->
                 mainPage.clickFavBook());
+        step("Check that books have been added",() ->
+                mainPage.checkMyBooksVisible());
     }
     @Test
     @DisplayName("NewBooks")
-    void theNewModuleCheck() {
+    void openTheNewModule() {
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
         step("Choose a module", () ->
                 mainPage.novieModuleClick());
+        step("Сheck the new module visible",() ->
+                mainPage.checkTheNewModuleVisible());
     }
 
     @Test
     @DisplayName("Check My books")
-    void myBooksModuleCheck() {
+    void openMyBooksModule() {
         step("Open mane page 'https://www.litres.ru/'", () ->
                 mainPage.openMainPage());
         step("Open 'my book' module. Check that the books from test 3 are displayed",() ->
                 mainPage.booksModuleClick());
+        step("Сheck the display of my books",() ->
+                mainPage.checkMyBooksVisible());
     }
 
 }

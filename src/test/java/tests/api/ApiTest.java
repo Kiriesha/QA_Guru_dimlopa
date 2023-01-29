@@ -22,13 +22,10 @@ public class ApiTest extends TestBase {
 
         UserData response = given()
                 .spec(request)
-                .log().uri()
-                .log().body()
                 .body(user.toString())
                 .when()
                 .post("/users")
                 .then()
-                .log().body()
                 .extract().as(UserData.class);
         assertEquals(response.getName(),"Oleg");
         assertEquals(response.getJob(), "developer");
@@ -43,15 +40,11 @@ public class ApiTest extends TestBase {
 
         UserData response = given()
                 .spec(request)
-                .log().uri()
-                .log().body()
                 .body(user.toString())
                 .when()
                 .post("/login")
                 .then()
                 .statusCode(200)
-                .log().status()
-                .log().body()
                 .extract().as(UserData.class);
 
         assertEquals(response.getToken(), "QpwL5tke4Pnpja7X4");
@@ -65,15 +58,11 @@ public class ApiTest extends TestBase {
 
         UserData response = given()
                 .spec(request)
-                .log().uri()
-                .log().body()
                 .body(user.toString())
                 .when()
                 .post("/login")
                 .then()
                 .statusCode(400)
-                .log().status()
-                .log().body()
                 .extract().as(UserData.class);
 
         assertEquals(response.getError(), "Missing password");
